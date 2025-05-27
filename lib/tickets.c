@@ -98,12 +98,12 @@ bigliettoPasseggero biglietto;
 void nomiBigliettiPasseggero(){
     bigliettoPasseggero biglietto;
     FILE* fPass = ticketsPassenger(READ);
-    int a = contaBigliettiPasseggero();
+    int b = contaBigliettiPasseggero();
     if(fPass != NULL){
-        if(a != 0){
+        if(b != 0){
 
         printf("\n%s\n", "Lista dei nomi biglietti passeggero:");
-        for(int i = 0; i < a; i++)
+        for(int i = 0; i < b; i++)
             {
         fread(&biglietto, sizeof(biglietto), 1, fPass);
         printf("%s%i: %s %s\n", "Utente", i+1, biglietto.utente.nome, biglietto.utente.cognome);
